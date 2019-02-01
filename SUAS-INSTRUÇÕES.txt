@@ -1,0 +1,29 @@
+# Instalar o Ambiente Local
+
+## Criar o virtualenv
+
+```bash
+$ virtualenv -p /usr/bin/python3.6 analyze_kart
+```
+
+## Clonar o código fonte da aplicação e Instalar modulo python
+
+```bash
+$ cd analyze_kart
+$ ./bin/pip install https://github.com/cesarbruschetta/analyze-kart-log 
+```
+
+## Executar processamento do Log
+
+```bash
+$ ./bin/analyze_kart_log -p <nome-do-arquivo-de-log>
+```
+## OBS
+
+* Usar Python 3.6+
+* Obs: É possivel opter um arquivo de log de exemplo no repositório, vc pode baixar pelo link https://raw.githubusercontent.com/cesarbruschetta/analyze-kart-log/master/kart_run.log
+* ou pelo comando:
+
+```bash
+$ wget https://raw.githubusercontent.com/cesarbruschetta/analyze-kart-log/master/kart_run.log
+```
