@@ -2,6 +2,7 @@
 
 import sys
 import io
+import os
 from unittest import TestCase
 from datetime import datetime, timedelta
 
@@ -31,8 +32,10 @@ class TestUtils(TestCase):
 
     def test_read_data_file(self):
         """ test to method read data file """
+        
+        root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-        data = utils.read_data_file("./kart_run.log")
+        data = utils.read_data_file(os.path.join(root_path, "kart_run.log"))
         self.assertEqual(data["038"][0]["name"], "F.MASSA")
 
     def test_print_best_lap_race(self):
