@@ -10,7 +10,7 @@ $ virtualenv -p /usr/bin/python3.6 analyze_kart
 
 ```bash
 $ cd analyze_kart
-$ ./bin/pip install https://github.com/cesarbruschetta/analyze-kart-log 
+$ ./bin/pip install git+https://github.com/cesarbruschetta/analyze-kart-log 
 ```
 
 ## Executar processamento do Log
